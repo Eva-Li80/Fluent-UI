@@ -4,14 +4,26 @@ import { Provider as PaperProvider, Button } from "react-native-paper";
 import TestButton from "./components/TestButton";
 import SegmentedButtonsModal from "./components/SegmentedButtonsModal";
 import ListModal from "./components/ListModal";
+import AvatarModal from "./components/AvatarModal";
 
 export default function App() {
+  const [visibleAvatar, setVisibleAvatar] = React.useState(false);
+  const showAvatarModal = () => setVisibleAvatar(true);
+  const hideAvatarModal = () => setVisibleAvatar(false);
+
   return (
     <PaperProvider>
       <View style={styles.container}>
         <Text>Välkommen till React Native Paper!</Text>
         <SegmentedButtonsModal />
         <ListModal />
+        <AvatarModal
+          hideAvatarModal={hideAvatarModal}
+          visibleAvatar={visibleAvatar}
+        />
+        <Button mode="contained" onPress={showAvatarModal}>
+          Visa Avatar Modal
+        </Button>
       </View>
     </PaperProvider>
   );

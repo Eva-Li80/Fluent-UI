@@ -9,8 +9,8 @@ type ModalProps = {
 };
 const GenericModal = (props: ModalProps) => {
   const [visible, setVisible] = useState<boolean>(false);
-
   const toggleVisibility = () => setVisible(!visible);
+
   return (
     <View style={styles.portal}>
       <Portal>

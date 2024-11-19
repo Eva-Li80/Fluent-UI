@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { Provider as PaperProvider, Button } from "react-native-paper";
 import TestButton from "./components/TestButton";
 import SegmentedButtonsModal from "./components/SegmentedButtonsModal";
+import ListModal from "./components/ListModal";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <View style={styles.container}>
         <Text>Välkommen till React Native Paper!</Text>
         <SegmentedButtonsModal />
+        <ListModal />
       </View>
     </PaperProvider>
   );

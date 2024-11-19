@@ -8,6 +8,7 @@ import ButtonModal from "./components/ButtonModal";
 import DrawerModal from "./components/DrawerModal";
 import ProgressBarModal from "./components/ProgressBarModal";
 import ThemeProvider, { useTheme } from "./ThemeProvider";
+import CardModal from "./components/CardModal";
 
 export default function App() {
   return (
@@ -25,7 +26,9 @@ const MainAppContent = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={{marginBottom: 20}}>Välkommen till React Native Paper!</Text>
+      <Text style={{ marginBottom: 20 }}>
+        Välkommen till React Native Paper!
+      </Text>
       <AvatarModal
         hideAvatarModal={hideAvatarModal}
         visibleAvatar={visibleAvatar}
@@ -38,6 +41,7 @@ const MainAppContent = () => {
       <ProgressBarModal />
       <SegmentedButtonsModal />
       <ListModal />
+      <CardModal />
       <Text style={{ marginTop: 300 }}>
         Använder {isDarkTheme ? "mörkt" : "ljust"} tema
       </Text>
@@ -54,6 +58,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#fff",
-    marginTop: 100
+    marginTop: 100,
   },
 });

@@ -17,8 +17,7 @@ export default function App() {
     <PaperProvider>
       <View style={styles.container}>
         <Text>Välkommen till React Native Paper!</Text>
-        <SegmentedButtonsModal />
-        <ListModal />
+
         <AvatarModal
           hideAvatarModal={hideAvatarModal}
           visibleAvatar={visibleAvatar}
@@ -29,9 +28,8 @@ export default function App() {
         <ButtonModal />
         <DrawerModal />
         <ProgressBarModal />
-        <Button mode="contained" onPress={() => console.log("Tryck!")}>
-          Klicka här
-        </Button>
+        <SegmentedButtonsModal />
+        <ListModal />
       </View>
     </PaperProvider>
   );

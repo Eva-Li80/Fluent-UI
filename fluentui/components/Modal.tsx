@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { useState } from "react";
-import { View, Button, StyleSheet } from "react-native";
-import { Portal, Modal } from "react-native-paper";
+import { View, StyleSheet } from "react-native";
+import { Portal, Modal, Button } from "react-native-paper";
 
 type ModalProps = {
   buttonTitle: string;
@@ -22,7 +22,13 @@ const GenericModal = (props: ModalProps) => {
           {props.children}
         </Modal>
       </Portal>
-      <Button title={props.buttonTitle} onPress={toggleVisibility}></Button>
+      <Button
+        style={{ marginTop: 10 }}
+        mode="contained"
+        onPress={toggleVisibility}
+      >
+        {props.buttonTitle}
+      </Button>
     </View>
   );
 };
@@ -39,5 +45,8 @@ const styles = StyleSheet.create({
     padding: 20,
     margin: 20,
     alignItems: "center",
+  },
+  button: {
+    marginTop: 10,
   },
 });

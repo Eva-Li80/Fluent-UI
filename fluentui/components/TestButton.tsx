@@ -3,7 +3,7 @@ import { Button } from "react-native-paper";
 
 const TestButton = () => (
   <Button icon="camera" mode="contained" onPress={() => console.log("Pressed")}>
-    Hej hej
+    en knapp
   </Button>
 );
 

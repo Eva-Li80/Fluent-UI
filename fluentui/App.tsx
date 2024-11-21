@@ -9,6 +9,8 @@ import DrawerModal from "./components/DrawerModal";
 import ProgressBarModal from "./components/ProgressBarModal";
 import ThemeProvider, { useTheme } from "./ThemeProvider";
 import CardModal from "./components/CardModal";
+import DarkTheme from "./components/themes/DarkTheme";
+import LightTheme from "./components/themes/LightTheme";
 
 export default function App() {
   return (
@@ -20,12 +22,13 @@ export default function App() {
 
 const MainAppContent = () => {
   const { toggleTheme, isDarkTheme } = useTheme();
+  const theme = isDarkTheme ? DarkTheme : LightTheme;
   const [visibleAvatar, setVisibleAvatar] = React.useState(false);
   const showAvatarModal = () => setVisibleAvatar(true);
   const hideAvatarModal = () => setVisibleAvatar(false);
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,{backgroundColor: `${theme.colors.background}` }]}>
       <Text style={{ marginBottom: 20 }}>
         Välkommen till React Native Paper!
       </Text>
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#fff",
+    // backgroundColor: "#fff",
     marginTop: 100,
   },
 });

@@ -4,9 +4,6 @@ const LightTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "purple",
-    background: "white",
-    text: "black",
   },
 };
 

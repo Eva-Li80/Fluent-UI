@@ -47,7 +47,6 @@ export default AvatarModal;
 const styles = StyleSheet.create({
   modal: {
     alignSelf: "center",
-    backgroundColor: "white",
     height: 500,
     width: 300,
   },
